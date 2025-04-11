@@ -1,0 +1,204 @@
+/* Resetta margini e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sfondo e impostazioni generali */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/bg.png'); /* Sostituisci con un'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Navbar */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Trasparenza per l'effetto overlay */
+    margin: 10px; /* Margine intorno alla navbar */
+    border-radius: 8px; /* Angoli arrotondati */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Colore del link al passaggio del mouse */
+}
+
+/* Spazio per la didascalia */
+.content {
+    margin-top: 80px; /* Per evitare che la navbar sovrapponga il contenuto */
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Sfondo semi-trasparente per la didascalia */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+}
+
+.background {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Imposta la trasparenza dello sfondo */
+}
+
+.trasparente {
+    opacity: 0.5;
+}
+
+footer {
+    background-color: #333; /* Colore di sfondo scuro */
+    color: white; /* Colore del testo bianco */
+    text-align: center; /* Centra il testo */
+    padding: 20px 0; /* Spazio sopra e sotto il testo */
+    position: fixed; /* Fissa il footer in basso */
+    bottom: 0; /* Posiziona il footer in basso */
+    left: 0; /* Fissa a sinistra */
+    width: 100%; /* Rende il footer largo quanto la pagina */
+    z-index: 1000; /* Assicura che il footer sia sopra al contenuto */
+}
+
+/* Stile per il paragrafo */
+footer p {
+    font-size: 14px; /* Imposta una dimensione del testo moderata */
+    margin: 0; /* Rimuove il margine */
+}
+
+/* Stile per l'anno in grassetto */
+footer p span#year {
+    font-weight: bold;
+}
+
+/* ------------------------------------------
+   Nuove animazioni dinamiche (SI aggiungi)
+-------------------------------------------*/
+
+/* Fade in upward animation for dynamic entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fadeInUp animation to content and footer */
+.content,
+footer {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Pulse animation for interactive elements */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Aggiunge animazione pulse al passaggio del mouse sui link della navbar */
+nav ul li a:hover {
+    animation: pulse 0.8s infinite;
+}
+
+/* Optional: aggiungi un effetto di transizione morbido a qualsiasi cambiamento di proprietà */
+* {
+    transition: all 0.3s ease;
+}
+
+
+
+
+/*Roba media player*/
+
+/* Contenitore del player */
+.player-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media player personalizzato */
+audio {
+    width: 100%;
+    max-width: 500px; /* Dimensione massima per il player */
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Titolo della canzone */
+.song-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Nome dell'artista */
+.artist-name {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+/*Fine roba media player*/
